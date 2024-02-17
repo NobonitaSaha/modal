@@ -34,9 +34,9 @@
     </head>
 
     <body>
-		<!-- ======== Cookie PopUp Start =========== -->
-		<div class="cookie-overlay"></div>
-		<div class="cookie-popup" id="cookiePopup">
+		<!-- ======== Confirm 18+ PopUp Start =========== -->
+		<div class="confirm-overlay"></div>
+		<div class="confirm-popup" id="confirmPopUp">
 			<div class="cookie-content">
 				<h2>Over 18+ only</h2>
 				<p>Please confirm that you are over 18.</p>
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- ========= Cookie PopUp End ============== -->
+		<!-- =========   Confirm 18+ PopUp End ============== -->
 		
 		
 	
@@ -748,22 +748,22 @@
 		
 
 		<script>
-			// Cookie PopUp Start
+			//  Confirm 18+ PopUp Start
 			document.addEventListener("DOMContentLoaded", function () {
 				if (!getCookie("acceptedpopup")) {
-					document.getElementById("cookiePopup").classList.add("show");
-					document.querySelector(".cookie-overlay").classList.add("show-overlay");
+					document.getElementById("confirmPopUp").classList.add("show");
+					document.querySelector(".confirm-overlay").classList.add("show-overlay");
 				}
 			});
 
 			function closePopup() {
-				document.getElementById('cookiePopup').style.display = 'none';
-				document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+				document.getElementById('confirmPopUp').style.display = 'none';
+				document.querySelector(".confirm-overlay").classList.remove("show-overlay");
 			}
 
 			function acceptpopup() {
-				document.getElementById("cookiePopup").classList.remove("show");
-				document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+				document.getElementById("confirmPopUp").classList.remove("show");
+				document.querySelector(".confirm-overlay").classList.remove("show-overlay");
 				setCookie("acceptedpopup", true, 30);
 			}
 
