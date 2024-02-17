@@ -1,0 +1,991 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background:  #151719 !important;
+}
+
+
+/* ------------------------ 
+	Cookie Popup Start 
+---------------------------- */
+.cookie-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    top: 0px;
+    z-index: 1000;
+    transform: translate(0, 180px);
+    color: rgb(43, 43, 43);
+	border: 1px solid rgb(232, 232, 232);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;	
+}
+
+.cookie-content > h2 {
+    font-size: 22px;
+    padding: 5px 0px 5px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.cookie-content > p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.cookie-popup.show {
+    display: block;
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+button.btn-3 {
+    font-size: 18px;
+    padding: 8px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(234, 131, 79);
+    color: rgb(255, 255, 255);
+    border: 0px;
+    margin: 20px 0px 0px 12px !important;
+    line-height: 1.7 !important;
+    outline: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.cookie-btn {
+    text-align: center;
+}
+
+.cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.91);
+    z-index: 999;
+    display: none; 
+}
+
+.show-overlay {
+    display: block; 
+}
+
+@media only screen and (max-width: 575px) and (min-width: 320px){
+	.cookie-popup.show {
+		margin: 0 8px;
+	}
+	.cookie-btn {
+		display: flex;
+		flex-direction: column-reverse;
+		float: unset;
+	}
+	
+	.cookie-popup {
+		transform: translate(0, 150px);
+	}
+	
+	button.btn-3 {
+		width: 100%;
+		font-size: 14px;
+        margin: 25px 0px 0px 0px !important;
+	}
+}
+/* ------------------------ 
+	Cookie Popup End 
+---------------------------- */
+
+
+
+/* ---------------------
+    Reused Button Start
+-----------------------*/
+.home-btn{
+    background: none;
+    padding: 12px 38px !important;
+    font-size: 17px;
+    font-family: 'Marcellus', serif !important;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: 1px solid rgba(214, 161, 86, 0.59);
+    letter-spacing: 0.4px;
+}
+
+.btn-light{
+    color: #fff;
+}
+
+.btn-light:hover{
+    color: #ffffff;
+}
+  
+.home-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: 0.8s;
+    color: #fff !important;
+    background-color: #ffd393;
+    z-index: -10;
+}
+
+.btn-light::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    height: 190%;
+}
+
+.btn-light:hover::before{
+    height: 0%;
+}
+
+.section-btn {
+    background: none;
+    padding: 12px 38px !important;
+    font-size: 18px !important;
+    font-family: 'Jost', sans-serif  !important;
+    cursor: pointer !important;
+    margin: 10px;
+    transition: 0.8s !important;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: 1px solid #ab916c !important;
+    letter-spacing: 0.4px;
+    border-radius: 0px !important;
+    margin-left: 0px;
+    outline: none !important;
+}
+
+.btn-transparent{
+    color: #ffffff !important;
+}
+
+.btn-transparent:hover{
+    color: #ffffff !important;
+}
+
+.section-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #aa8b5f;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn-transparent::before {
+    top: -1px;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn-transparent:hover::before{
+    height: 190%;
+}
+/* ---------------------
+    Reused Button End
+-----------------------*/
+  
+
+
+/* --------------------
+    Home Start
+----------------------- */
+.home-section{
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 670px;
+    position: relative;
+    z-index: 1;
+}
+
+.home-section::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(180deg, #000000 0%, #000000A3 100%);
+    opacity: 0.59;
+    width: 100%;
+}
+
+.home-content{
+    padding: 160px 100px;
+    text-align: center;
+}
+
+.home-content > h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 70px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 95px;
+}
+
+.home-content > p{
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ddd3c5;
+    padding: 15px 120px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-style: normal;
+}
+/* -----------------
+    Home End
+-------------------- */
+
+
+
+/*-------------------
+	Book Start
+--------------------- */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: white;
+}
+
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+}
+
+form#myForm {
+    border: 1px solid #ab916c;
+    padding: 15px;
+    position: relative;
+}
+
+.book {
+    width: 100%;
+    color: white;
+    padding: 100px 0px 50px 0px;
+}
+
+.box label {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 18px;
+}
+
+.book .input {
+    padding: 20px 30px 20px 60px;
+    border: 1px solid #ab916c;
+    margin: 0px -30px;
+}
+
+.book .search {
+    padding: 20px 0px;
+    margin: -37px 21px -37px 17px;
+    width: 100%;
+    border: 1px solid #ab916c;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(171, 145, 108);
+    outline: none;
+    color: rgb(207, 207, 207);
+    background: transparent;
+    margin-top: 14px !important;
+    font-family: Jost, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::placeholder {
+	color: #cfcfcf;
+}
+
+.book .search input {
+    background: none;
+    border: none;
+    font-size: 30px !important;
+    font-family: 'Jost', sans-serif !important;
+    margin-top: 30px !important;
+    color: #fff !important;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ab916c;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+    padding: 20px 20px;
+}
+
+.popup-content {
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Marcellus', serif !important;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 20px;
+    word-spacing: 0.4px;
+    color: white;
+}
+
+.popup-close {
+    color: #151719;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 260px;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*-------------------
+	Book End
+--------------------- */
+
+
+
+/* -------------------
+    About Start
+----------------------- */
+.about-section{
+    padding: 50px 0px 100px 0px;
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.about-content-img {
+    position: relative;
+}
+
+img.about-img-01 {
+    width: 460px;
+    height: auto;
+}
+
+img.about-img-02 {
+    position: absolute;
+    right: -100px;
+    top: 250px;
+    height: 420px;
+    width: 350px;
+}
+
+.about-description {
+    width: 480px;
+    margin-top: 40px;
+}
+
+.about-description > small{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: #b99d75;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.about-description > h2{
+    font-size: 56px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: Marcellus, serif;
+    margin: 15px 0px;
+}
+
+.about-description > p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #cfcfcf;
+    font-family: 'Jost', sans-serif;
+    margin: 20px 0px;
+    font-weight: 400;
+}
+/* ----------------------
+    About End
+------------------------- */
+
+
+
+/* ----------------------
+    Accommodations Start
+--------------------------- */
+.accommodations-section{
+    padding: 50px 0px;
+}
+
+.section-title{
+    text-align: center;
+}
+
+.section-title > small{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: #b99d75;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.section-title > h2{
+    font-size: 44px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: Marcellus, serif;
+    margin: 15px 0px;
+}
+
+.accommodations-card-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    margin-top: 80px;
+}
+
+.accommodation-card .accomm-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.accommodation-card .accomm-img img {
+    display: block;
+    width: 100%;
+    transition: 0.35s ease-in-out;
+    height: auto;
+    cursor: pointer;
+}
+
+.accommodation-card.accom-style .accomm-text {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    padding: 15px 50px;
+    background: black;
+    color: #fff;
+    width: fit-content;
+    max-width: calc(100% - 20px);
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.accommodation-card .accomm-text {
+    z-index: 9;
+    width: 100%;
+    padding: 30px;
+}
+
+.accommodation-card.cs-hover-img-zoom:hover .accomm-img img {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+}
+
+.accommodation-card.accom-style .accom-card-wrap {
+    overflow: visible;
+}
+
+.accommodation-card .accom-card-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.accommodation-card.accom-style:hover .accomm-text {
+    background: #aa8b5f;
+    color: #fff;
+}
+/* ------------------------
+    Accommodations End
+--------------------------- */
+
+
+
+/* ------------------------
+    Restaurant Start
+-------------------------- */
+.restaurant-section{
+    margin: 50px 0px 0px 0px;
+    background-color: #aa8b5f;
+}
+
+.section-container{
+    width: 100%;
+    max-width: 1565px;
+    margin: 0 auto;
+}
+
+.restaurant-bg{
+    height: 950px;
+    margin: 260px 0px 0px 0px;
+}
+
+.restaurant-card-01 > img{
+    width: 680px;
+    height: auto;
+    margin-top: -180px;
+}
+
+.restaurant-content-01{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.restaurant-card-02 {
+    margin-right: 120px;
+    width: 100%;
+}
+
+.restaurant-description > small{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: rgb(110 81 39);
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.restaurant-description > h2{
+    font-size: 52px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: Marcellus, serif;
+    margin: 15px 0px;
+}
+
+.restaurant-description > p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    margin: 20px 0px;
+    font-weight: 400;
+}
+
+.restaurant-card-04 > img {
+    width: 600px;
+    height: auto;
+    margin-top: -140px;
+}
+
+.restaurant-content-02{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    gap: 100px;
+}
+
+.restaurant-card-03 {
+    width: 40%;
+    margin-left: 120px;
+    margin-top: 305px;
+}
+
+.restaurant-card-03 > .restaurant-description small{
+    color: #b99d75 !important;
+}
+
+.restaurant-card-02 .restaurant-description > a > button {
+    position: absolute;
+    z-index: 1;
+    background: black;
+    border: none !important;
+}
+
+.restaurant-card-02 .restaurant-description >  a > button::before {
+    background: #9d7f54;
+}
+
+.restaurant-card-02 .restaurant-description > a > button:hover {
+    color: #000000 !important;
+    border: 1px solid #8f734b !important;
+}
+
+.restaurant-card-02 .restaurant-description >  a > button:hover::before{
+    height: 190%;
+}
+/* -------------------------
+    Restaurant End 
+---------------------------- */
+
+
+
+/* --------------------------
+    Facilities Start
+---------------------------- */
+.facilities-section{
+    padding: 630px 0px 50px 0px;
+}
+
+.facilities-card {
+    background-color: #000000;
+    display: flex;
+}
+
+.facilities-card-02 {
+    background-color: #000000;
+    display: flex;
+}
+
+.facilities-img > img {
+    width: 558px;
+}
+
+.facilities-description {
+    padding: 50px 30px;
+}
+
+.facilities-description > small{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: #b99d75;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.facilities-description > h2{
+    font-size: 36px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: Marcellus, serif;
+    margin: 15px 0px;
+}
+
+.facilities-description > p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #cfcfcf;
+    font-family: 'Jost', sans-serif;
+    margin: 20px 0px;
+    font-weight: 400;
+}
+
+.facilities-description > a > .section-btn{
+    position: absolute;
+    z-index: 1;
+}
+/* ---------------------------
+    Facilities End 
+------------------------------*/
+
+
+
+/* ---------------------------
+    Review Start
+------------------------------*/
+.review-section{
+    padding: 80px 0px 100px 0px;
+}
+
+.review-bg{
+    background-image: url('../images/review-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.review-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(180deg, #000000bd 0%, #000000b3 100%);
+    opacity: 0.8;
+    width: 100%;
+}
+
+.review-card {
+    background-color: #aa8b5f;
+    display: flex;
+    position: absolute;
+    margin-top: -150px;
+    z-index: 1;
+    margin-left: 140px;
+}
+
+.review-img > img {
+    width: 558px;
+}
+
+.review-description {
+    padding: 75px 0px 0px 0px;
+}
+
+.review-description > p {
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+    margin: 40px 40px 20px 40px;
+    font-weight: 400;
+}
+
+
+.review-title > small{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    color: #b99d75;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.review-title > h2{
+    font-size: 52px;
+    line-height: 1.2em;
+    color: #fff;
+    font-family: Marcellus, serif;
+    margin: 15px 0px;
+    width: 680px;
+    line-height: 68px;
+    padding: 45px 0px 0px 0px;
+}
+
+.review-description ul {
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+    color: #7a4b0e;
+    margin: 0px 0px 5px 5px;
+}
+
+.review-description ul li{
+    padding: 0px 0px 0px 6px;
+}
+
+.review-description > h3{
+    font-family: 'Jost', sans-serif;
+    margin: 40px 40px 5px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.review-description > h4{
+    font-family: 'Jost', sans-serif;
+    margin: 0px 40px 5px 40px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.6px;
+}
+/* ---------------------------
+    Review End 
+------------------------------*/
+
+
+
+/* --------------------------
+	Footer Section Start
+---------------------------- */
+.footer {
+    padding: 35px 0px 25px 0px;
+    background: #000000;
+    margin-top: 220px;
+}
+
+.footer-btn-group {
+    text-align: center;
+}
+
+button.footer-btn {
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 0px 8px;
+    font-family: 'Marcellus', serif;
+    word-spacing: 1px;
+    letter-spacing: 0.4px;
+}
+
+/* -- Footer Modal PopUp Start -- */
+.modal-lg, .modal-xl {
+    --bs-modal-width: 900px !important;
+    border-radius: none !important;
+}
+
+.modal-content {
+    background: #151719 !important;
+}
+
+.modal-header{
+    border-bottom: 1px solid #dee2e64d !important;
+}
+
+.modal-footer{
+    border-top: 1px solid #dee2e64d !important;
+}
+
+h2.modal-title {
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Marcellus', serif;
+    margin: 8px 0px;
+    color: #ffffff;
+}
+
+h3.footer-title {
+    font-family: 'Marcellus', serif;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+p.footer-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 17px;
+    color: #cfcfcf;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+}
+
+ul.list-icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.list-icon li {
+    display: flex;
+    align-items: center;
+    margin: 15px 20px;
+    color: #cfcfcf;
+    font-family: 'Jost', sans-serif;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 20px;
+}
+
+ul.list-icon li .icon {
+    width: 25px;
+    height: 20px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    margin-right: -8px;
+    min-width: 30px;
+    font-size: 20px;
+    margin-top: -2px;
+}
+
+span.icon.background-transparent i {
+    font-size: 15px;
+}
+
+.btn-close {
+    padding: 20px 30px !important;
+	outline: none !important;
+}
+
+.footer > .btn-close{
+    color: #ab916c !important;
+}
+
+.btn-close:focus {
+    box-shadow: none !important;
+}
+
+button.btn.btn-danger {
+    font-family: 'Marcellus', serif;
+    font-size: 15px;
+    background: #aa8b5f;
+    border: 0px;
+    border-radius: 0px;
+    padding: 12px 30px;
+    font-size: 18px;
+}
+
+button.btn.btn-danger:hover{
+    background: #aa8b5f;
+    opacity: 0.8;
+}
+
+.modal-header .btn-close {
+    color: #aa8b5f;
+    border: 0px;
+    border-radius: 0px;
+    font-size: 28px;
+    opacity: 1;
+}
+
+.modal-header .btn-close:hover {
+    color: #aa8b5f;
+    opacity: 0.8;
+}
+/* -- Footer Modal PopUp End -- */
+
+/* --------------------------
+	Footer Section End
+---------------------------- */

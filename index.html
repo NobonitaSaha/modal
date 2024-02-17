@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Experience beautiful moments at Australia's exquisite hotels. Explore the epitome of luxury in Australia's exquisite hotels, where impeccable accommodations and top-notch amenities converge to offer a truly unforgettable stay in the heart of Down Under.">
+        <meta name="keywords" content="Best Australia hotels, Best Australia resorts, Australia hotel booking, Top Australia Hotels">
+
+
+        <!-- ========== Title ========= -->
+        <title>Australia's Hotel Template</title> 
+        
+        
+        <!-- ============ Custom Link ========= -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">	
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <!-- =========== Google Fonts ============= -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+
+
+        <!-- ============= Icon Link ============= -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+        <!-- =========== Popup 18+ ================ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+		<!-- ======== Cookie PopUp Start =========== -->
+		<div class="cookie-overlay"></div>
+		<div class="cookie-popup" id="cookiePopup">
+			<div class="cookie-content">
+				<h2>Over 18+ only</h2>
+				<p>Please confirm that you are over 18.</p>
+				<div class="cookie-btn">
+					<div class="cookie-double-btn">
+						<button onclick="acceptpopup()" class="btn-3">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ========= Cookie PopUp End ============== -->
+		
+		
+	
+        <!-- ============== Home Section Start ============ -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Experience Beautiful Moments at Australia's Exquisite Hotels </h1>
+                <p>Explore the epitome of luxury in Australia's exquisite hotels, where impeccable accommodations and top-notch amenities converge to offer a truly unforgettable stay in the heart of Down Under.</p>
+                <a href="#book" onclick="smoothScroll('book')">
+                    <button class="home-btn btn-light">Start Exploring</button>
+                </a>    
+            </div>
+        </section>
+        <!-- ============== Home Section End ============= -->
+
+
+
+        <!-- ============ Book Section Start ============= -->
+        <section class="book" id="book">
+            <div class="container flex">
+                <form id="myForm">
+                    
+                    <div class="input grid">
+                        <div class="box">
+                            <label>Check-in:</label>
+                            <input type="date">
+                        </div>
+                        
+                        <div class="box">
+                            <label>Check-out:</label>
+                            <input type="date">
+                        </div>
+                        
+                        <div class="box">
+                            <label>Adults:</label> <br>
+                            <input type="number" placeholder="0">
+                        </div>
+                        
+                        <div class="box">
+                            <label>Email:</label> <br>
+                            <input type="email" placeholder="Your Email">
+                        </div>
+                        
+                        
+                        <div class="search">
+                            <input type="submit" value="SUBMIT" onclick="showConfirmation()">
+                        </div>
+                    </div>
+                    
+                </form>	
+            </div>
+        </section>
+        
+        <!-- ========== Submit Popup ============= -->
+        <div id="confirmationPopup" class="popup">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <p>Form submitted successfully!</p>
+            </div>
+        </div>
+        <!-- ============= Book Section End =========== -->
+
+
+
+        <!-- ============ About Section Start ============  -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-content-img">
+                       <img src="images/about-01.png" class="about-img-01" alt="about-01 photo">
+                       <img src="images/about-02.png" class="about-img-02" alt="about-02 photo">
+                    </div>
+
+                    <div class="about-description">
+                        <small>STAY IN THE HEART OF Australia</small>
+                        <h2>Luxurious Furnished Serviced Hotels in the Heart of Times</h2>
+                        <p>Whether you're seeking a lavish escape or a tranquil oasis, Australia's finest hotels stand ready to exceed your every expectation, leaving you with memories to cherish for a lifetime. Welcome to a world where luxury knows no bounds - welcome to the extraordinary hospitality of Australia's finest hotels.</p>
+
+                        <a href="#home" onclick="smoothScroll('home')">
+                            <button class="section-btn btn-transparent">Read Details</button>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ About Section End =============== -->
+
+
+
+        <!-- ============ Accommodations Section Start ============= -->
+        <section id="accommodations" class="accommodations-section">
+            <div class="container">
+                <div class="section-title">
+                    <small>exceptional accommodations</small>
+                    <h2>Choose Your Room's Type</h2>
+                </div>
+
+                <div class="accommodations-card-content">
+                    <!-- === Card-01 === -->
+                    <div class="accommodations-content">
+                        <div class="accommodation-card accom-style text-center cs-hover-img-zoom">
+                            <div class="accom-card-wrap">  
+                                <div class="accomm-img">
+                                    <img src="images/card-01.png" alt="card-01 photo">	 
+                                </div>
+    
+                                <div class="accomm-text">
+                                    <h6 class="accomm-title">Presidential Bedroom
+                                    </h6>	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- === Card-03 === -->
+                    <div class="accommodations-content">
+                        <div class="accommodation-card accom-style text-center cs-hover-img-zoom">
+                            <div class="accom-card-wrap">  
+                                <div class="accomm-img">
+                                    <img src="images/card-02.png" alt="card-02 photo">	 
+                                </div>
+    
+                                <div class="accomm-text">
+                                    <h6 class="accomm-title">Luxury King Suite
+                                    </h6>	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === Card-03 === -->
+                    <div class="accommodations-content">
+                        <div class="accommodation-card accom-style text-center cs-hover-img-zoom">
+                            <div class="accom-card-wrap">  
+                                <div class="accomm-img">
+                                    <img src="images/card-03.png" alt="card-03 photo">	 
+                                </div>
+    
+                                <div class="accomm-text">
+                                    <h6 class="accomm-title">Cozy Bedroom
+                                    </h6>	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== Accommodations Section End ================ -->
+
+
+
+        <!-- =========== Restaurant Section Start ============== -->
+        <section id="restaurant" class="restaurant-section">
+            <div class="section-container">
+                <div class="restaurant-bg">
+
+                    <div class="restaurant-content-01">
+                        <div class="restaurant-card-01">
+                            <img src="images/rest-01.png" alt="rest-01 photo">
+                        </div>
+        
+                        <div class="restaurant-card-02">
+                            <div class="restaurant-description">
+                                <small>Culinary Delights During Vacations and Trips</small>
+                                <h2>Indulge in Exquisite Cuisine from Around the Globe</h2>
+                                <p>Our seasoned chefs craft international specialties bursting with unique flavors, promising an unforgettable dining experience. Relax and unwind as you savor gourmet cuisine paired with signature cocktails or homemade tonics, all complemented by soothing music and breathtaking views overlooking the bustling cityscape. </p>
+                                
+                                <a href="#home" onclick="smoothScroll('home')">
+                                    <button class="section-btn btn-transparent">Read Details</button>
+                                </a>    
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="restaurant-content-02">
+        
+                        <div class="restaurant-card-03">
+                            <div class="restaurant-description">
+                                <small>Uncover Our Exceptional Services & Facilities</small>
+                                <h2>Essential Guide to Ensure Your Perfect Trip</h2>
+                                <p>Indulge in breathtaking views from our spectacular rooftop lounge, maintain your well-being at the Technogym fitness center, stay connected in our media corner, and enjoy the seamless support of our gracious 24/7 resident services team. </p>
+                                
+                                <a href="#home" onclick="smoothScroll('home')">
+                                    <button class="section-btn btn-transparent">Read Details</button>
+                                </a>    
+                            </div>
+                        </div>
+    
+                        
+                        <div class="restaurant-card-04">
+                            <img src="images/rest-02.png" alt="rest-02 photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== Restaurant Section End ================ -->
+
+
+
+        <!-- ============ Facilities Section Start ============== -->
+        <section id="facilities" class="facilities-section">
+            <div class="container">
+                <div class="facilities-card">
+                    <div class="facilities-img">
+                        <img src="images/facilities-01.png" alt="facilities-01 photo">
+                    </div>
+
+                    <div class="facilities-description">
+                        <small>Meetings Room</small>
+                        <h2>Stylish Conference Room</h2>
+                        <p>Our hotel boasts three intimate meeting rooms, each designed to accommodate up to ten guests for formal gatherings. 
+                        </p>
+                        <a href="#home" onclick="smoothScroll('home')">
+                            <button class="section-btn btn-transparent">Read Details</button>
+                        </a> 
+                    </div>
+                </div>
+
+                
+                <div class="facilities-card-02">
+                    <div class="facilities-description">
+                        <small>health journey</small>
+                        <h2>Finest Well-being Experience</h2>
+                        <p>Indulge in a transformative journey of well-being at our hotel spa center for an unparalleled experience.
+                        </p>
+                        <a href="#home" onclick="smoothScroll('home')">
+                            <button class="section-btn btn-transparent">Read Details</button>
+                        </a>    
+                    </div>
+
+                    <div class="facilities-img">
+                        <img src="images/facilities-02.png" alt="facilities-02 photo">
+                    </div>
+                </div>
+
+                
+                <div class="facilities-card">
+                    <div class="facilities-img">
+                        <img src="images/facilities-03.png" alt="facilities-03 photo">
+                    </div>
+
+                    <div class="facilities-description">
+                        <small>Gym & training</small>
+                        <h2>Revitalize Your Body & Mind</h2>
+                        <p>Our Fitness Center Offers a Fully Equipped Gym, Yoga Room, and Dance Studio.
+                        </p>
+                        <a href="#home" onclick="smoothScroll('home')">
+                            <button class="section-btn btn-transparent">Read Details</button>
+                        </a>    
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ============= Facilities Section End =============== -->
+
+
+        <!-- ============== Review Section Start ================ -->
+        <section id="review" class="review-section">
+            <div class="review-bg">
+                <div class="container">
+                    <div class="review-title">
+                        <h2>Our Commitment: Luxurious Comfort and Personalized Service for Every Guest </h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="review-card">
+                    <div class="review-img">
+                        <img src="images/review-02.png" alt="review-02 photo">
+                    </div>
+
+                    <div class="review-description">
+                        <ul>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                        </ul>
+                        <p>“The room I was in was spacious - 2 lockers for each person, plugs next to the beds and a big fan & window. Also the free breakfast and events they offer are nice”
+                        </p>
+                        <h3>Lea</h3>
+                        <h4>Germany</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============== Review Section Start ================ -->
+
+
+        <!-- ========== Footer Section Start ========== -->
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+            
+                    <div class="footer-btn-group">
+                        <button type="button" class="footer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Terms of Service
+                        </button>
+                        
+                        <button type="button" class="footer-btn" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Privacy Policy
+                        </button>
+                    </div>
+                    
+                    <div class="footer-terms">
+                        <!-- ======== Modal PopUp ======= -->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                
+                                    <!-- === Modal Header == -->
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">Privacy Policy</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                    
+                                    
+                                    <!-- === Modal Body === -->
+                                    <div class="modal-body">
+                                    
+                                        <div>
+                                            <h3 class="footer-title">Privacy Policy for stayexplorer42.com</h3>
+                                            <p class="footer-text">
+                                                At stayexplorer42.com, accessible from stayexplorer42.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by stayexplorer42.com and how we use it.
+                                                <br><br>
+                                                If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">General Data Protection Regulation (GDPR)</h3>
+                                            <p class="footer-text">
+                                                We are a Data Controller of your information.
+                                                <br><br>
+                                                stayexplorer42.com legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
+                                            </p>
+                                            
+                                            <ul class="list-icon">
+                                            
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> stayexplorer42.com needs to perform a contract with you
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> You have given stayexplorer42.com permission to do so
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> Processing your personal information is in stayexplorer42.com legitimate interests
+
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> stayexplorer42.com needs to comply with the law
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                        
+                                        
+                                        <div>
+                                            <p class="footer-text">
+                                                stayexplorer42.com will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
+                                                <br><br>
+                                                If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.
+                                                <br><br>
+                                                In certain circumstances, you have the following data protection rights:
+                                            </p>
+                                            
+                                            <ul class="list-icon">
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> The right to access, update or to delete the information we have on you.
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> The right of rectification.
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> The right to object.
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> The right of restriction.
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> The right to data portability
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> The right to withdraw consent
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Log Files</h3>
+                                            <p class="footer-text">
+                                                stayexplorer42.com follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+                                            </p>
+                                        </div>	
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">popup and Web Beacons</h3>
+                                            <p class="footer-text">
+                                                Like any other website, stayexplorer42.com uses 'popup'. These popup are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Privacy Policies</h3>
+                                            <p class="footer-text">
+                                                You may consult this list to find the Privacy Policy for each of the advertising partners of stayexplorer42.com.
+                                                <br>
+                                                Third-party ad servers or ad networks uses technologies like popup, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on stayexplorer42.com, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+                                                <br>
+                                                Note that stayexplorer42.com has no access to or control over these popup that are used by third-party advertisers.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Third Party Privacy Policies</h3>
+                                            <p class="footer-text">
+                                                stayexplorer42.com Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
+                                                <br><br>
+                                                You can choose to disable popup through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+                                                
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Children's Information</h3>
+                                            <p class="footer-text">
+                                                Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+                                                <br><br>
+                                                stayexplorer42.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Online Privacy Policy Only</h3>
+                                            <p class="footer-text">
+                                                Our Privacy Policy created at GDPRPrivacyPolicy.net) applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in stayexplorer42.com. This policy is not applicable to any information collected offline or via channels other than this website.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">Consent</h3>
+                                            <p class="footer-text">
+                                                By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+                                            </p>
+                                        </div>	
+                                        
+                                        
+                                    </div>
+                
+                                    <!-- === Modal Footer === -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div  class="footer-policy">
+                        <!-- ======== Modal PopUp ======= -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg  modal-sm">
+                                <div class="modal-content">
+                                
+                                    <!-- == Modal Header == -->
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" id="exampleModalLabel">Terms of Service</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                        
+                                    <div class="modal-body">
+                                        <h3 class="footer-title">Website Terms and Conditions of Use</h3><br>
+                                        
+                                        <div>
+                                            <h3 class="footer-title">1. Terms</h3>
+                                            <p class="footer-text">
+                                                By accessing this Website, accessible from stayexplorer42.com, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">2. Use License</h3>
+                                            <p class="footer-text">
+                                                Permission is granted to temporarily download one copy of the materials on stayexplorer42.com's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                                                <br><br>
+                                            </p>
+                                            
+                                            
+                                            <ul class="list-icon">
+                                            
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> modify or copy the materials;
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    </span> use the materials for any commercial purpose or for any public display;
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> attempt to reverse engineer any software contained on stayexplorer42.com's Website;
+
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> remove any copyright or other proprietary notations from the materials; or
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span> transferring the materials to another person or "mirror" the materials on any other server.
+                                                </li>
+                                            </ul><br>
+                                            
+                                            
+                                            <p class="footer-text">
+                                                This will let stayexplorer42.com to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.
+                                                
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">3. Disclaimer</h3>
+                                            <p class="footer-text">
+                                                All the materials on stayexplorer42.com's Website are provided "as is". stayexplorer42.com makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, stayexplorer42.com does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+                                            </p>
+                                        </div>	
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">4. Limitations</h3>
+                                            <p class="footer-text">
+                                                stayexplorer42.com or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on stayexplorer42.com’s Website, even if stayexplorer42.com or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">5. Revisions and Errata</h3>
+                                            <p class="footer-text">
+                                                The materials appearing on stayexplorer42.com’s Website may include technical, typographical, or photographic errors. stayexplorer42.com will not promise that any of the materials in this Website are accurate, complete, or current. stayexplorer42.com may change the materials contained on its Website at any time without notice. stayexplorer42.com does not make any commitment to update the materials.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">6. Links</h3>
+                                            <p class="footer-text">
+                                                stayexplorer42.com has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by stayexplorer42.com of the site. The use of any linked website is at the user’s own risk.
+                                                
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">7. Site Terms of Use Modifications</h3>
+                                            <p class="footer-text">
+                                                stayexplorer42.com may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">8. Your Privacy</h3>
+                                            <p class="footer-text">
+                                                Please read our Privacy Policy.
+                                            </p>
+                                        </div>		
+                                        
+                                        
+                                        <div>
+                                            <h3 class="footer-title">9. Governing Law</h3>
+                                            <p class="footer-text">
+                                                Any claim related to stayexplorer42.com's Website shall be governed by the laws of ar without regards to its conflict of law provisions.
+                                            </p>
+                                        </div>	
+                                        
+                                    </div>
+                                    
+                                    <!-- == Modal Footer == -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+        <!-- =========== Footer Section End =========== -->
+
+
+
+        <!-- ========== Script Link =========== -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+        <script>
+            // Function to open the popup (Submit Popup)
+            function openPopup() {
+                document.getElementById('confirmationPopup').style.display = 'block';
+            }
+
+            // Function to close the popup
+            function closePopup() {
+                document.getElementById('confirmationPopup').style.display = 'none';
+            }
+
+            // Attach an event listener to the form
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Perform your form submission logic here
+
+                // Open the popup after form submission
+                openPopup();
+            });
+        </script>
+
+        <script>
+            // Smooth Scroll For Full Page
+            function smoothScroll(targetId) {
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop;
+
+                    // Smooth scrolling animation
+                    window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                    });
+                } 
+                else {
+                    console.error(`Element with id ${targetId} not found.`);
+                }
+            }
+        </script>
+		
+
+		<script>
+			// Cookie PopUp Start
+			document.addEventListener("DOMContentLoaded", function () {
+				if (!getCookie("acceptedpopup")) {
+					document.getElementById("cookiePopup").classList.add("show");
+					document.querySelector(".cookie-overlay").classList.add("show-overlay");
+				}
+			});
+
+			function closePopup() {
+				document.getElementById('cookiePopup').style.display = 'none';
+				document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+			}
+
+			function acceptpopup() {
+				document.getElementById("cookiePopup").classList.remove("show");
+				document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+				setCookie("acceptedpopup", true, 30);
+			}
+
+			function setCookie(name, value, days) {
+				var expires = "";
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					expires = "; expires=" + date.toUTCString();
+				}
+				document.cookie = name + "=" + (value || "") + expires + "; path=/";
+			}
+
+			function getCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
+			}
+		</script>
+
+    </body>
+</html>
