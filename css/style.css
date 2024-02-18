@@ -32,7 +32,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;	
 }
 
-.cookie-content > h2 {
+.confirm-content > h2 {
     font-size: 22px;
     padding: 5px 0px 5px 0px;
     text-transform: uppercase;
@@ -41,7 +41,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.cookie-content > p {
+.confirm-content > p {
     margin-bottom: 0px;
     font-size: 15px;
     line-height: 30px;
@@ -73,7 +73,7 @@ button.btn-3 {
     font-family: "Poppins", sans-serif;
 }
 
-.cookie-btn {
+.confirm-btn {
     text-align: center;
 }
 
@@ -96,7 +96,7 @@ button.btn-3 {
 	.confirm-popup.show {
 		margin: 0 8px;
 	}
-	.cookie-btn {
+	.confirm-btn {
 		display: flex;
 		flex-direction: column-reverse;
 		float: unset;
